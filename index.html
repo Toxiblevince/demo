@@ -1,0 +1,204 @@
+<div class="container">
+    <div class="left"></div>
+    <div class="middle">
+        <h1 class="title">NSA-ZSTTS: Towards Zero-Shot TTS via Non-parametric Speaker Adaptation</h1>
+        <h3 class="abstract">
+            Abstract
+        </h3>
+        <p>
+            The goal of this work is zero-shot text to speech (ZS-TTS), which aims to generate speech samples with unseen speaker identity derived from an acoustic reference. ZS-TTS is more challenging than conventional TTS tasks while facing the following challenges: 1) The TTS models are often trained on small datasets and do not generalize well; and 2) The unseen speaker identity features are difficult to model when conditioned on noisy references. Unlike previous works, this paper proposes NSA-ZSTTS, a zero-shot TTS framework based on non-parametric speaker adaptation, which predicts speaker embedding with a nearest neighbor classifier over a large datastore of cached examples, using representations from a speaker encoder for similarity search. This approach requires no additional training and scales to give the TTS model direct access to thousands of speaker examples at test time, resulting in a highly robust model that consistently improves performance when conditioned on noisy references. Extensive experimental results on the AISHELL3 and VCTK benchmark datasets demonstrate the favourable performance of the proposed method. Qualitatively, NSA-ZSTTS is easily interpretable: it combines the F0 representation and speaker embedding of reference speech to retrieve highly relevant examples.
+        </p>
+        <div style="text-align: center">
+            <img style="width: 80%;height: auto;text-align: center" src="model.png">
+        </div>
+        <h3 class="abstract" style="margin-top: 20px">
+            AISHELL3
+        </h3>
+        <table style="margin-top: 20px">
+            <thead>
+                <tr>
+                    <th>speaker id</th>
+                    <th>reference</th>
+                    <th>vall-e</th>
+                    <th>ours</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>S0005</th>
+                    <th>
+                        <audio controls src="./tableAudio/raw/BAC009S0005W0442.wav"></audio>
+                    </th>
+                    <th>
+                        <audio controls src="tableAudio/table1/valle-X/s0005.wav"></audio>
+                    </th>
+                    <th>
+                        <audio controls src="tableAudio/table1/ours/S0005.wav"></audio>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>S0073</th>
+                    <th>
+                        <audio controls src="./tableAudio/raw/BAC009S0073W0126.wav"></audio>
+                    </th>
+                    <th>
+                        <audio controls src="tableAudio/table1/valle-X/s0073.wav"></audio>
+                    </th>
+                    <th>
+                        <audio controls src="tableAudio/table1/ours/S0073.wav"></audio>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>S0200</th>
+                    <th>
+                        <audio controls src="./tableAudio/raw/BAC009S0200W0121.wav"></audio>
+                    </th>
+                    <th>
+                        <audio controls src="tableAudio/table1/valle-X/s0200.wav"></audio>
+                    </th>
+                    <th>
+                        <audio controls src="tableAudio/table1/ours/S0200.wav"></audio>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>S0251</th>
+                    <th>
+                        <audio controls src="./tableAudio/raw/BAC009S0251W0253.wav"></audio>
+                    </th>
+                    <th>
+                        <audio controls src="tableAudio/table1/valle-X/s0251.wav"></audio>
+                    </th>
+                    <th>
+                        <audio controls src="tableAudio/table1/ours/S0251.wav"></audio>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>S0916</th>
+                    <th>
+                        <audio controls src="./tableAudio/raw/BAC009S0916W0463.wav"></audio>
+                    </th>
+                    <th>
+                        <audio controls src="tableAudio/table1/valle-X/s0916.wav"></audio>
+                    </th>
+                    <th>
+                        <audio controls src="tableAudio/table1/ours/S0916.wav"></audio>
+                    </th>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <h3 class="abstract" style="margin-top: 20px">
+            Poorer audio quality of AISHELL
+        </h3>
+        <table style="margin-top: 20px">
+            <thead>
+                <tr>
+                    <th>speaker id</th>
+                    <th>reference</th>
+                    <th>vall-e</th>
+                    <th>ours</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>S0113</th>
+                    <th>
+                        <audio controls src="./tableAudio/table2/reference/s0133-prompt.WAV"></audio>
+                    </th>
+                    <th>
+                        <audio controls src="./tableAudio/table2/vall-e/s0133.wav"></audio>
+                    </th>
+                    <th>
+                        <audio controls src="./tableAudio/table2/ours/S0133.wav"></audio>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>S0200</th>
+                    <th>
+                        <audio controls src="./tableAudio/table2/reference/s00200-prompt.wav"></audio>
+                    </th>
+                    <th>
+                        <audio controls src="./tableAudio/table2/vall-e/s00200.wav"></audio>
+                    </th>
+                    <th>
+                        <audio controls src="./tableAudio/table2/ours/S0200.wav"></audio>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>S0251</th>
+                    <th>
+                        <audio controls src="./tableAudio/table2/reference/s0251-prompt.WAV"></audio>
+                    </th>
+                    <th>
+                        <audio controls src="./tableAudio/table2/vall-e/s0251.wav"></audio>
+                    </th>
+                    <th>
+                        <audio controls src="./tableAudio/table2/ours/S0251.wav"></audio>
+                    </th>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="right"></div>
+
+
+
+</div>
+
+<script>
+
+</script>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #2c3e50;
+        height: 100vh;
+        width: 100vw;
+    }
+    .title{
+        text-align: center;
+    }
+    .abstract{
+        font-size: 30px;
+        color: #42b983;
+        margin-top: 15px;
+    }
+    .left {
+        width: 200px;
+        height: 100%;
+        float: left;
+    }
+    .right {
+        width: 200px;
+        height: 100%;
+        float: left;
+    }
+    .middle {
+        width:calc(100% - 400px);
+        height: 100%;
+        float: left;
+    }
+    .table {
+        border: 1px solid #2875cd;
+        text-align: left;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin: auto;
+    }
+</style>
